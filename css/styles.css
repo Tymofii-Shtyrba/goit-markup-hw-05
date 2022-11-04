@@ -14,6 +14,7 @@
     --social-link-color: #AFB1B8;
     --basement-social-link-color: rgba(255, 255, 255, 0.1);
     --face-background: #C4C4C4;
+    --activity-descr-color: rgba(47, 48, 58, 0.8);
 }
 
 /*Global_styles*/
@@ -350,6 +351,25 @@ img {
 
 .activity:not(:last-child) {
     margin-right: 30px;
+}
+
+.activity {
+    position: relative;
+}
+
+.activity-descr {
+    position: absolute;
+    bottom: 0px;
+    padding: 27px 0px;
+    width: 100%;
+    background-color: var(--activity-descr-color);
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 /*Team_section*/
