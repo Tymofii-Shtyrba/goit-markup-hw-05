@@ -17,6 +17,8 @@
     --activity-descr-color: rgba(47, 48, 58, 0.8);
     --modal-background: rgba(0, 0, 0, 0.2);
     --modal-close-btn: rgba(0, 0, 0, 0.1);
+    --portfolio-overlay-color: rgba(33, 150, 243, 0.9);
+    --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Global_styles*/
@@ -621,9 +623,9 @@ img {
     height: 100%;
     background-color: var(--modal-background);
     filter: blur(0px);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms var(--transition-function),
+                visibility 250ms var(--transition-function),
+                filter 500ms var(--transition-function);
 }
 
 .backdrop.is-hidden {
@@ -750,4 +752,27 @@ img {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
+}
+
+.item-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.item-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--portfolio-overlay-color);
+    padding: 63px 24px;
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    transition: transform 250ms var(--transition-function);
+}
+
+.project-item:hover .item-overlay {
+    transform: translateY(-100%);
 }
