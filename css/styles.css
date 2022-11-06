@@ -123,6 +123,7 @@ img {
     color: inherit;
     padding: 32px 0px;
     position: relative;
+    transition: color 250ms var(--transition-function);
 }
 
 .nav-link:hover,
@@ -153,6 +154,7 @@ img {
     padding: 32px 0px;
     display: flex;
     align-items: center;
+    transition: color 250ms var(--transition-function);
 }
 
 .contacts-nav:hover,
@@ -174,11 +176,13 @@ img {
 .envelope-icon {
     fill: var(--descriprion-color);
     margin-right: 10px;
+    transition: fill 250ms var(--transition-function);
 }
 
 .smartphone-icon {
     fill: var(--descriprion-color);
     margin-right: 10px;
+    transition: fill 250ms var(--transition-function);
 }
 
 .contacts-nav:hover .envelope-icon {
@@ -245,11 +249,14 @@ img {
     line-height: 1.87;
     letter-spacing: 0.06em;
     padding: 8px 30px;
+    transition: background 250ms var(--transition-function),
+                box-shadow 250ms var(--transition-function);
 }
 
 .order-button:hover,
 .order-button:focus {
     background: var(--button-active-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*Features*/
@@ -446,10 +453,12 @@ img {
     align-items: center;
     border-radius: 50%;
     justify-content: center;
+    transition: background-color 250ms var(--transition-function);
 }
 
 .social-icon {
     fill: var(--social-link-color);
+    transition: fill 250ms var(--transition-function);
 }
 
 .social-link:hover,
@@ -509,10 +518,12 @@ img {
     align-items: center;
     justify-content: center;
     display: flex;
+    transition: border-color 250ms var(--transition-function);
 }
 
 .client-logo {
     fill: var(--social-link-color);
+    transition: fill 250ms var(--transition-function);
 }
 
 .link-client:hover {
@@ -562,10 +573,12 @@ img {
 
 .contact-first-color {
     color: var(--main-color);
+    transition: color 250ms var(--transition-function);
 }
 
 .contact-second-color {
     color: var(--basement-contakts-color);
+    transition: color 250ms var(--transition-function);
 }
 
 .contact-first-color:hover,
@@ -611,6 +624,7 @@ img {
 .basement-social-link:hover,
 .basement-social-link:focus {
     background-color: var(--first-logo-color);
+    transition: background-color 250ms var(--transition-function);
 }
 
 /* Modal window */
@@ -624,28 +638,32 @@ img {
     background-color: var(--modal-background);
     filter: blur(0px);
     transition: opacity 250ms var(--transition-function),
-                visibility 250ms var(--transition-function),
-                filter 500ms var(--transition-function);
+                visibility 250ms var(--transition-function);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    filter: blur(4px);
 }
 
 .modal {
     position: absolute;
     top: 221px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
     background-color: var(--main-color);
     width: 528px;
     height: 581px;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    scale: 100%;
+    transition: transform 250ms var(--transition-function);
+}
 
+.backdrop.backdrop.is-hidden .modal {
+    transform: translate(-50%, 20%);
+    
 }
 
 .close-btn {
@@ -684,6 +702,9 @@ img {
     border-color: transparent;
     border-radius: 4px;
     padding: 6px 22px;
+    transition: background 250ms var(--transition-function),
+                box-shadow 250ms var(--transition-function),
+                color 250ms var(--transition-function);
 }
 
 .filt-but:hover,
@@ -722,6 +743,10 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+.project-item {
+    transition: box-shadow 250ms var(--transition-function);
 }
 
 .project-item:hover,
