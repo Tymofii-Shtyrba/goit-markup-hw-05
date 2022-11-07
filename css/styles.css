@@ -134,6 +134,7 @@ img {
 
 .current::after {
     content: '';
+    position: relative;
     display: block;
     width: 100%;
     height: 4px;
@@ -174,32 +175,13 @@ img {
 }
 
 .envelope-icon {
-    fill: var(--descriprion-color);
+    fill: currentColor;
     margin-right: 10px;
-    transition: fill 250ms var(--transition-function);
 }
 
 .smartphone-icon {
-    fill: var(--descriprion-color);
+    fill: currentColor;
     margin-right: 10px;
-    transition: fill 250ms var(--transition-function);
-}
-
-.contacts-nav:hover .envelope-icon {
-    fill: var(--first-logo-color
-    )
-}
-
-.contacts-nav:focus .envelope-icon {
-    fill: var(--first-logo-color)
-}
-
-.contacts-nav:hover .smartphone-icon {
-    fill: var(--first-logo-color);
-}
-
-.contacts-nav:focus .smartphone-icon {
-    fill: var(--first-logo-color);
 }
 
 /*Face*/
@@ -208,7 +190,6 @@ img {
     margin: 0px auto;
     width: 1200px;
     padding: 200px 15px;
-    /* outline: red solid 1px; */
 }
 
 .face {
@@ -223,7 +204,6 @@ img {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .face-header {
@@ -798,6 +778,7 @@ img {
     transition: transform 250ms var(--transition-function);
 }
 
-.project-item:hover .item-overlay {
+.project-item:hover .item-overlay,
+.project-item:focus .item-overlay {
     transform: translateY(-100%);
 }
